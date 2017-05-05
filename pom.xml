@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.alibaba.otter</groupId>
-    <artifactId>canal</artifactId>
+    <groupId>com.youzan.dts</groupId>
+    <artifactId>dts-all</artifactId>
     <packaging>pom</packaging>
-    <name>canal module for otter ${project.version}</name>
-    <version>${canal_version}</version>
-    <url>https://github.com/alibaba/canal</url>
-
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+    <name>dts</name>
+    <version>${dts_version}</version>
 
     <modules>
         <module>wagon-common</module>
@@ -21,12 +15,7 @@
 
     <properties>
         <!-- project version -->
-        <wagon_version>3.0</wagon_version>
-        <wagon_proxy_version>3.7</wagon_proxy_version>
-        <wagon_console_version>3.8</wagon_console_version>
-        <canal_version>1.0.23-SNAPSHOT</canal_version>
-        <nsqclient_version>2.3.20170424-RELEASE</nsqclient_version>
-        <rocketmq_version>4.1.0-incubating-SNAPSHOT</rocketmq_version>
+        <dts_version>1.0.0</dts_version>
 
         <!-- maven -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,28 +49,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- youzan -->
-            <dependency>
-                <groupId>com.alibaba.otter</groupId>
-                <artifactId>canal.extend.common</artifactId>
-                <version>${canal_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.otter</groupId>
-                <artifactId>canal.deployer</artifactId>
-                <version>${canal_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.otter</groupId>
-                <artifactId>canal.client</artifactId>
-                <version>${canal_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.youzan</groupId>
-                <artifactId>NSQ-Client</artifactId>
-                <version>${nsqclient_version}</version>
-            </dependency>
-
             <!-- junit -->
             <dependency>
                 <groupId>junit</groupId>

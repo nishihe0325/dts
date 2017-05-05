@@ -1,4 +1,4 @@
-package com.youzan.wagon.common;
+package com.youzan.dts.common;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.exception.ExceptionUtils;

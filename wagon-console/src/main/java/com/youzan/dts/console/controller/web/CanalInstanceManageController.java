@@ -1,4 +1,4 @@
-package com.youzan.wagon.console.controller.web;
+package com.youzan.dts.console.controller.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

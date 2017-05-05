@@ -1,14 +1,13 @@
-package com.youzan.wagon.console;
+package com.youzan.dts.console;
 
-import com.youzan.wagon.common.PropertiesManager;
+import com.youzan.dts.common.PropertiesManager;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+public class DtsConsoleLauncher {
 
-public class WagonConsoleLauncher {
-
-    private static final Logger LOG = LoggerFactory.getLogger(WagonConsoleLauncher.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DtsConsoleLauncher.class);
 
     public static void main(String[] args) {
         try {

@@ -1,4 +1,4 @@
-package com.youzan.wagon.common;
+package com.youzan.dts.common;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.concurrent.ThreadFactory;

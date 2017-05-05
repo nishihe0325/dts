@@ -21,8 +21,8 @@ public class JettyEmbedServer {
     private String webappPath;
 
     public JettyEmbedServer() {
-        port = PropertiesManager.getInteger("wagon.console.webapp.port");
-        webappPath = PropertiesManager.getProperty("wagon.console.webapp.path");
+        port = PropertiesManager.getInteger("dts.console.webapp.port");
+        webappPath = PropertiesManager.getProperty("dts.console.webapp.path");
     }
 
     public void start() throws Exception {

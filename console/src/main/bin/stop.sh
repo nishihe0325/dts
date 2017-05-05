@@ -12,24 +12,24 @@ get_pid() {
 }
 
 base=`dirname $0`/..
-pidfile=$base/bin/wagon.pid
+pidfile=$base/bin/dts.pid
 if [ ! -f "$pidfile" ];then
-	echo "wagon_executor is not running. exists"
+	echo "dts_executor is not running. exists"
 	exit
 fi
 
 pid=`cat $pidfile`
 if [ "$pid" == "" ] ; then
-	pid=`get_pid "appName=wagon_executor"`
+	pid=`get_pid "appName=dts_executor"`
 fi
 
-echo -e "`hostname`: stopping wagon_executor $pid ... "
+echo -e "`hostname`: stopping dts_executor $pid ... "
 kill $pid
 
 LOOPS=0
 while (true); 
 do 
-	gpid=`get_pid "appName=wagon_executor" "$pid"`
+	gpid=`get_pid "appName=dts_executor" "$pid"`
     if [ "$gpid" == "" ] ; then
     	echo "Oook! cost:$LOOPS"
     	`rm $pidfile`

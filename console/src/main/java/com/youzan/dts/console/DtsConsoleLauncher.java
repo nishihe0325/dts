@@ -30,14 +30,14 @@ public class DtsConsoleLauncher {
                         // monitor.stop();
                         server.stop();
                     } catch (Throwable e) {
-                        LOG.error("## Something goes wrong when stoping the wagon console:\n{}", ExceptionUtils.getFullStackTrace(e));
+                        LOG.error("## Something goes wrong when stoping the dts console:\n{}", ExceptionUtils.getFullStackTrace(e));
                     } finally {
-                        LOG.info("wagon console is stoped.");
+                        LOG.info("dts console is stoped.");
                     }
                 }
             });
         } catch (Throwable e) {
-            LOG.error("## Something goes wrong when starting up the wagon console:\n{}", ExceptionUtils.getFullStackTrace(e));
+            LOG.error("## Something goes wrong when starting up the dts console:\n{}", ExceptionUtils.getFullStackTrace(e));
             System.exit(0);
         }
     }

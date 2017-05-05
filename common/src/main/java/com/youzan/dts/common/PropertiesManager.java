@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class PropertiesManager {
     private static final Logger LOG = LoggerFactory.getLogger(PropertiesManager.class);
 
-    private static String CONFIG = "/wagon.properties";
+    private static String CONFIG = "/dts.properties";
     private static Properties properties;
     private static final AtomicLong LAST_MODIFIED = new AtomicLong();
     private static final ScheduledExecutorService EXECUTOR = Executors.newScheduledThreadPool(1, new NamedThreadFactory("PropertiesManagerScheduler"));

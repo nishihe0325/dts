@@ -12,7 +12,7 @@
     <version>${dts_version}</version>
 
     <dependencies>
-        <!-- wagon -->
+        <!-- dts -->
         <dependency>
             <groupId>com.youzan.dts</groupId>
             <artifactId>common</artifactId>

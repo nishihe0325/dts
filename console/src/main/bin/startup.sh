@@ -3,16 +3,16 @@
 cd `dirname $0`
 bin_path=`pwd`
 base=$bin_path/..
-wagon_conf=$base/conf/wagon.properties
+dts_conf=$base/conf/dts.properties
 logback_configurationFile=$base/conf/logback.xml
 
-if [ -f $base/bin/wagon.pid ] ; then
-	echo "found wagon.pid , Please run stop.sh first ,then startup.sh" 2>&2
+if [ -f $base/bin/dts.pid ] ; then
+	echo "found dts.pid , Please run stop.sh first ,then startup.sh" 2>&2
     exit 1
 fi
 
-if [ ! -d $base/logs/wagon ] ; then 
-	mkdir -p $base/logs/wagon
+if [ ! -d $base/logs/dts ] ; then 
+	mkdir -p $base/logs/dts
 fi
 
 ## set java path
@@ -32,7 +32,7 @@ in
 1 )	
 	var=$*
 	if [ -f $var ] ; then 
-		wagon_conf=$var
+		dts_conf=$var
 	else
 		echo "THE PARAMETER IS NOT CORRECT.PLEASE CHECK AGAIN."
         exit
@@ -40,7 +40,7 @@ in
 2 )	
 	var=$1
 	if [ -f $var ] ; then
-		wagon_conf=$var
+		dts_conf=$var
 	else 
 		if [ "$1" = "debug" ]; then
 			DEBUG_PORT=$2
@@ -66,12 +66,12 @@ else
 fi
 
 JAVA_OPTS=" $JAVA_OPTS -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfile.encoding=UTF-8"
-wagon_OPTS="-Dlogback.configurationFile=$logback_configurationFile -Dwagon.conf=$wagon_conf -DappName=wagon_executor"
+dts_OPTS="-Dlogback.configurationFile=$logback_configurationFile -Ddts.conf=$dts_conf -DappName=dts_executor"
 
-if [ -e $wagon_conf -a -e $logback_configurationFile ]
+if [ -e $dts_conf -a -e $logback_configurationFile ]
 then
 
-    	MAIN_CLASS="com.youzan.wagon.console.WagonConsoleLauncher"
+    	MAIN_CLASS="com.youzan.dts.console.dtsConsoleLauncher"
     	for i in $base/lib/*;
     		do CLASSPATH=$i:"$CLASSPATH";
     	done
@@ -81,13 +81,13 @@ then
         cd $bin_path
 
         echo LOG CONFIGURATION : $logback_configurationFile
-        echo conf : $wagon_conf
+        echo conf : $dts_conf
         echo CLASSPATH :$CLASSPATH
-        $JAVA $JAVA_OPTS $JAVA_DEBUG_OPT $wagon_OPTS -classpath $CLASSPATH $MAIN_CLASS 1>>$base/logs/wagon/wagon.log 2>&1 &
-        echo $! > $base/bin/wagon.pid
+        $JAVA $JAVA_OPTS $JAVA_DEBUG_OPT $dts_OPTS -classpath $CLASSPATH $MAIN_CLASS 1>>$base/logs/dts/dts.log 2>&1 &
+        echo $! > $base/bin/dts.pid
 
         echo "cd to $bin_path for continue"
         cd $bin_path
 else
-        echo " conf("$wagon_conf") OR log configration file($logback_configurationFile) is not exist,please create then first!"
+        echo " conf("$dts_conf") OR log configration file($logback_configurationFile) is not exist,please create then first!"
 fi

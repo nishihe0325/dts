@@ -37,11 +37,6 @@
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li #if($!tabName=="instanceManage") class="active" #end><a href="/instanceManage">实例管理</a></li>
-						<li><a href="/canalInstanceList">实例列表</a></li>
-						<li><a href="/canalClientPositionList">客户端位点</a></li>
-						<li><a href="/canalRunningInfoList">运行信息</a></li>
-						<li><a href="/tools">工具</a></li>
-						<li><a href="/ruleList">规则管理</a></li>
 					</ul>
 				</div>
 				</nav>

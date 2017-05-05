@@ -16,29 +16,7 @@
 
     <modules>
         <module>wagon-common</module>
-
-        <module>wagon-persistent</module>
-        <module>wagon-tools</module>
         <module>wagon-console</module>
-
-        <module>wagon-filter</module>
-        <module>wagon-deployer</module>
-
-        <module>common</module>
-        <module>meta</module>
-        <module>dbsync</module>
-        <module>filter</module>
-        <module>driver</module>
-        <module>parse</module>
-        <module>sink</module>
-        <module>store</module>
-        <module>protocol</module>
-        <module>instance</module>
-        <module>server</module>
-        <module>client</module>
-        <module>deployer</module>
-        <module>example</module>
-        <module>extend-common</module>
     </modules>
 
     <properties>

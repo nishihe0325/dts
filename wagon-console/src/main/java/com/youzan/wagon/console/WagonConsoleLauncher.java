@@ -1,16 +1,11 @@
 package com.youzan.wagon.console;
 
+import com.youzan.wagon.common.PropertiesManager;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.otter.canal.common.utils.PropertiesManager;
 
-/**
- * wagon控制台启动类
- * 
- * @author wangguofeng since 2016年3月9日 下午2:22:47
- */
 public class WagonConsoleLauncher {
 
     private static final Logger LOG = LoggerFactory.getLogger(WagonConsoleLauncher.class);

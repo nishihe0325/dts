@@ -1,5 +1,6 @@
 package com.youzan.wagon.console;
 
+import com.youzan.wagon.common.PropertiesManager;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
@@ -7,11 +8,10 @@ import org.eclipse.jetty.webapp.WebAppContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.otter.canal.common.utils.PropertiesManager;
 
 /**
  * Jetty服务类
- * 
+ *
  * @author wangguofeng since 2016年3月9日 下午2:40:24
  */
 public class JettyEmbedServer {
@@ -37,7 +37,7 @@ public class JettyEmbedServer {
         connector.setPort(port);
         connector.setReuseAddress(true);
 
-        server.setConnectors(new Connector[] { connector });
+        server.setConnectors(new Connector[]{connector});
         server.setStopAtShutdown(true);
         server.setHandler(webContext);
 

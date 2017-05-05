@@ -7,7 +7,7 @@
         <version>${dts_version}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>dts-common</artifactId>
+    <artifactId>common</artifactId>
     <version>${dts_version}</version>
 
     <dependencies>

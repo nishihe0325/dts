@@ -8,15 +8,22 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.youzan.dts</groupId>
-    <artifactId>dts-console</artifactId>
+    <artifactId>console</artifactId>
     <version>${dts_version}</version>
 
     <dependencies>
         <!-- wagon -->
         <dependency>
             <groupId>com.youzan.dts</groupId>
-            <artifactId>dts-common</artifactId>
+            <artifactId>common</artifactId>
             <version>${dts_version}</version>
+        </dependency>
+
+        <!-- alibaba -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid_version}</version>
         </dependency>
 
         <!-- junit -->

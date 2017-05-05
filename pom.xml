@@ -9,8 +9,8 @@
     <version>${dts_version}</version>
 
     <modules>
-        <module>wagon-common</module>
-        <module>wagon-console</module>
+        <module>common</module>
+        <module>console</module>
     </modules>
 
     <properties>
